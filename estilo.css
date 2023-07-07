@@ -39,9 +39,10 @@ body{   /*Estilo de Fundo da página*/
     background-color: black;
 }       /*Bloco central com form*/
 .container{
+    padding: 0;
     display: flex;
     flex-direction: column;
-    background-color: rgb(185, 21, 21);
+    background-color: rgb(197, 0, 0);
     width: 500px;
     height: 85%;
     position: absolute;
@@ -85,7 +86,7 @@ body{   /*Estilo de Fundo da página*/
     align-items: center;
     margin: 1px;
     border: 0.6px;
-    border-style:double;
+    border-style:groove;
     border-color: #878787;
     border-radius: 30px;
     background-color: rgb(0, 0, 0);
@@ -95,27 +96,119 @@ body{   /*Estilo de Fundo da página*/
     height: 40px;
     width: 255px;
     scale: 90%;
-    
     transition: border 0.1s ;
 }
 .continuarGoogle:hover{
-    border-color: #1ed760;
+    border-color: rgb(255, 255, 255);
 }
+
 .icone{
     height: 18px;
 }
 form{
-    position: relative;
+    left: 20%;
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 180px;
+    align-items: flex-start;
+    margin-top: 10%;
+    width: 60%;
+    height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    
+    
 }
-input{
+.labelInfo{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 75%;
+    color: white;
+}
+.emailSenha{
+    padding: 4%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 100%;
     color: #878787;
     background-color: rgb(20,20,20);
-    border-style: groove;
-    border:3px;
-    border-color:#878787;
+    border-radius: 3%;
+    border: 0.5%;
+    border-style: double;
+    border-color:#585858;
+    font-size: 75%;
+    height: 15%;
+    transition: 0.1s;
 }
+.emailSenha:hover{
+    border-color: white;
+}
+.enviar{
+    margin-top: 10%;
+    background-color: #1ed760;
+    border-radius: 30px;
+    border: 0.6px;
+    color: rgb(0, 0, 0);
+    transition: border 0.1s;;
+    width: 100%;
+    height: 20%;
+}
+.enviar:hover{
+    border:3px;
+    border-color:white;
+    scale: 103%;
+}
+#checkbocSection{
+    width: 6.8rem;
+    height: 3rem;
+    background-color: antiquewhite;
+    border-radius: 32px;
+}
+.checkbox{
+   display: none;
+}
+.checkbox-label{
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left:0;
+    z-index: 1;
+    background-color: aliceblue;
+    border: 1px solid wheat;
+    border-radius: 32px;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: .3s cubic-bezier(0.895,0.07,0.685,0.68);
+}
+.checkbox-label::before{
+    content: 'On';
+    color: #1ed760;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 0;
+    top: 14px;
+    left: 12px;
+}   
+.checkbox-label::after{
+    content: 'Off';
+    color: #bdd0c4;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 14px;
+    top: 14px;
+    left: 10px;
+
+}
+.checkbox:checked{
+    left: 3.7rem;
+    background-color: aqua;
+}
+.checkbox:checked + .checkbox-label::before{
+    font-size: 14px ;
+}
+
+
+
