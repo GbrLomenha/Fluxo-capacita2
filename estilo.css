@@ -42,7 +42,7 @@ body{   /*Estilo de Fundo da página*/
     padding: 0;
     display: flex;
     flex-direction: column;
-    background-color: rgb(197, 0, 0);
+    background-color: rgb(0, 0, 0);
     width: 500px;
     height: 85%;
     position: absolute;
@@ -101,10 +101,10 @@ body{   /*Estilo de Fundo da página*/
 .continuarGoogle:hover{
     border-color: rgb(255, 255, 255);
 }
-
+    /*Tamanho dos icones*/
 .icone{
     height: 18px;
-}
+}   /*Formulário de login*/
 form{
     left: 20%;
     display: flex;
@@ -158,57 +158,63 @@ form{
     border-color:white;
     scale: 103%;
 }
-#checkbocSection{
-    width: 6.8rem;
-    height: 3rem;
-    background-color: antiquewhite;
-    border-radius: 32px;
-}
-.checkbox{
-   display: none;
-}
-.checkbox-label{
-    width: 3rem;
-    height: 3rem;
-    display: block;
+/*Estilização da checkbox Lembre de Mim*/
+.switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scale: 90%;
+}
+.switch .switch-wrapper{
+    display: inline-block;
+    width: 60px;
+    height: 34px;
     position: relative;
+}
+.switch .switch-wrapper .switch-button{
+    position: absolute;
     top: 0;
-    left:0;
-    z-index: 1;
-    background-color: aliceblue;
-    border: 1px solid wheat;
-    border-radius: 32px;
-    box-shadow: none;
-    box-sizing: border-box;
-    transition: .3s cubic-bezier(0.895,0.07,0.685,0.68);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #343434;
+    border-color: white;
 }
-.checkbox-label::before{
-    content: 'On';
-    color: #1ed760;
+.switch.switch-text{
+    margin-left: 2px;
+}
+.switch .switch-wrapper input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.switch.switch-text{
+    padding-left: 0.9rem;
+    font-size: 0.05rem;
+}
+.switch .switch-wrapper .switch-button::before{
+    content: "";
+    width: 26px;
+    height: 26px;
     position: absolute;
-    text-transform: uppercase;
-    font-size: 0;
-    top: 14px;
-    left: 12px;
-}   
-.checkbox-label::after{
-    content: 'Off';
-    color: #bdd0c4;
-    position: absolute;
-    text-transform: uppercase;
-    font-size: 14px;
-    top: 14px;
-    left: 10px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    transition: .4s all ease;
+    background-color: #000000;
+}
+.switch .switch-wrapper input:checked+.switch-button{
+    background-color: #1ed760;
 
 }
-.checkbox:checked{
-    left: 3.7rem;
-    background-color: aqua;
+.switch .switch-wrapper input:checked+.switch-button::before{
+    transform: translateX(26px);
 }
-.checkbox:checked + .checkbox-label::before{
-    font-size: 14px ;
-}
-
-
 
