@@ -42,23 +42,38 @@
         </divc>
         <form>    <!-- Div Formulário de Login... --> 
             <label class="labelInfo">E-mail ou nome de usuário</label>
-            <input type="email" name="E-mail ou nome de usuário" class="emailSenha" placeholder="E-mail ou nome de usuário">
+            <input id="email" type="email" name="E-mail ou nome de usuário" class="emailSenha" placeholder="E-mail ou nome de usuário">
 
             <label class="labelInfo">Senha</label>
-            <input type="password" name="Senha" class="emailSenha" placeholder="Senha">
+            <input id="senha" type="password" name="Senha" class="emailSenha" placeholder="Senha">
                    <!-- Botão switch checkbox... -->  
             <label class="switch">
                 <div class="switch-wrapper">
-                    <input type="checkbox" id="checkbox">
+                    <input type="checkbox" name=checkbox id="checkbox">
                     <span class="switch-button"></span>
                 </div>
                 <span class="switch-text">Lembrar de mim</span>
             </label>
                 <!-- Botão switch checkbox... --> 
-            <button class="enviar">
+            <button class="enviar"id="enviar">
                 <b>Enviar</b>
             </button>
         </form>      
+        <h3 class="forgot"><b><u>Esqueceu sua senha?</u></b></h3>
+        <br>
+        <h3 class="inscricao">Não tem uma conta? <b><u>Inscrever-se no Spotfluxo</u></b></h3>
     </div>
+
+    <script>
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value
+        var lembrar = document.getElementById("checkbox")
+        if(document.getElementById("checkbox")==true){
+            document.getElementById("enviar").addEventListener("click",function(){alert(`Login realizado!\nBem vindo ${email}.\nLembraremos de você.`)});
+        }
+        else{
+            document.getElementById("enviar").addEventListener("click",function(){alert(`Login realizado!\nBem vindo ${email}.`)});
+        }
+    </script>
 </body>
 </html>
